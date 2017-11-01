@@ -77,7 +77,7 @@ var newFunction = function (param) {
 
 // However if I do the same thing here
 console.log(match);
-// My output would be undefined because we are not outside the scope of our function
+// My output would be undefined because we are now outside the scope of our function
 
 ```
 
