@@ -48,13 +48,31 @@ if (false) {
 }
 ```
 
-## Operators!
+## Logical Operators!
 
 There are a bunch of different operators you can use within your if conditions.
 
-List of operators:
+List of logical operators:
 
-- `&&` - AND operator this relies on ALL conditions being true. (You can && as many as needed)
+- `&&` - And
+- `||` - Or
+- `!` - Not
+- `==` - Unstrict Equals
+- `===` - Strict Equals
+- `!=` - Unstrict Not Equals
+- `!==` - Strict Not Equals
+- `>` - Greater Than
+- `>=` - Greater Than or Equal To
+- `<` - Less Than
+- `<=` - Less Than or Equal To
+
+### Examples
+
+#### AND (&&)
+
+This relies on ALL conditions being true.
+
+**NOTE** Pay close attention to the variable usage and then compare it with the variables in the `||` operator below.
 
 Example:
 
@@ -66,10 +84,18 @@ if (true && true) {
 if (true && false) {
   console.log('I will not trigger');
 }
+
+// You can use it with variables too!
+var x = true && true; // x is set to true
+var y = 'cat' && 'dog'; // both are true so y is set to the dog string
+var z = false && 'cat'; // returns false
 ```
 
+#### OR (||)
 
-- `||` - OR operator this relies on one OR the other is true
+This relies on one OR the other being true
+
+**NOTE** Pay close attention to the variable usage and then compare it with the variables in the `&&` operator above.
 
 Example:
 
@@ -77,9 +103,27 @@ Example:
 if (true || false) {
   console.log('This will trigger');
 }
+
+if (false || true) {
+  console.log('this will also trigger');
+}
+
+if (false || false) {
+  console.log('this will not trigger');
+}
+
+// You can use it with variables too!
+var w = true || true; // w is set to true
+var x = 'cat' || 'dog'; // both are true so x is set to the cat string
+var y = false || 'cat'; // this will set y to the string of cat
+var z = 'cat' || false; // this will set z to the string of cat as well
 ```
 
-- `!` - NOT operator reverses the value used mainly when expecting a value to be false
+#### NOT (!)
+
+Returns `false` if its single operand that can be converted to `true`; otherwise, returns `true`.
+
+**NOTE** Notice how placing the NOT operator in front of a string converts it to a boolean? Do you think it would do the same to the other types? (psst: yeah it would)
 
 Example:
 
@@ -91,9 +135,20 @@ if (!false) {
 if (!true) {
   console.log('this will not trigger');
 }
+
+if (!'cat') {
+  console.log('this will not trigger');
+}
+
+// Yep we can use this one with variables too
+var x = !true; // Sets x to false
+var y = !false; // Sets y to true
+var z = !'cat'; // Sets z to false
 ```
 
-- `==` - Equals comparison (not strict) only compares the values
+#### Not Strict Equal (==)
+
+Compares both sides of the == sign but only looks at their value and not their type
 
 Example:
 
@@ -105,9 +160,15 @@ if ('4' == 4) {
 if ('four' == 4) {
   console.log('this will not trigger');
 }
+
+if (4 == 4) {
+  console.log('this will trigger');
+}
 ```
 
-- `===` - Equals comparison (Strict) compares both values & types
+#### Strict Equals (===)
+
+Compares both sides of the === sign compares both value and type
 
 Example:
 
@@ -121,7 +182,9 @@ if (4 === 4) {
 }
 ```
 
-- `!=` Not Equal (not strict) comparison this is mainly used when comparing null and other falsy values
+#### Unstrict Not Equal (!=)
+
+Compares both sides of the != sign returns true if both values are not equal
 
 Example:
 
@@ -135,7 +198,9 @@ if (undefined != null) {
 }
 ```
 
-- `!==` Not Equal (strict) comparison compares both type and value
+#### Strict Not Equal (!==)
+
+Compares value and type of the values, returns true if either are false
 
 ```javascript
 if (1 !== 1) {
@@ -147,6 +212,82 @@ if (1 !== '1') {
 }
 ```
 
-You will use a mixture of the aboveoperators quite a bit through your code when writing larger apps.
+#### Greater Than (>)
 
+Returns true if the left side is greater than the right side
 
+```javascript
+if (1 > 0) {
+  console.log('this will trigger');
+}
+
+if (1 > 1) {
+  console.log('this will not trigger');
+}
+
+if ('test' > 1) {
+  console.log('this will not trigger');
+}
+```
+
+#### Greater Than or Equal To (>=)
+
+Returns true if the left side is greater than or equal to the right side
+
+```javascript
+if (1 >= 0) {
+  console.log('this will trigger');
+}
+
+if (1 >= 1) {
+  console.log('this will trigger');
+}
+
+if (0 >= 1) {
+  console.log('this will not trigger');
+}
+
+if ('test' >= 1) {
+  console.log('this will not trigger');
+}
+```
+
+#### Less Than (<)
+
+Returns true if the left side is less than the right side
+
+```javascript
+if (0 < 1) {
+  console.log('this will trigger');
+}
+
+if (1 < 1) {
+  console.log('this will not trigger');
+}
+
+if ('test' < 1) {
+  console.log('this will not trigger');
+}
+```
+
+#### Greater Than or Equal To (<=)
+
+Returns true if the left side is less than or equal to the right side
+
+```javascript
+if (0 <= 1) {
+  console.log('this will trigger');
+}
+
+if (1 <= 1) {
+  console.log('this will trigger');
+}
+
+if (1 <= 0) {
+  console.log('this will not trigger');
+}
+
+if ('test' <= 1) {
+  console.log('this will not trigger');
+}
+```
