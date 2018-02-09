@@ -4,7 +4,9 @@ Arrays are a great data type to help make organizing and maintain data sets.
 
 ## Using Arrays
 
-It is recommended to keep your data consistent within arrays if you're able
+It is recommended to keep your data consistent within arrays if you're able.
+
+**If you want me to add a specific method to the readme let me know which one and I will happily add it**
 
 Example:
 
@@ -64,7 +66,7 @@ var again = [1];
 again.push(2, 3, 4, 5, 6); // => [1, 2, 3, 4, 5, 6]
 ```
 
-## concat()
+### concat()
 
 This method allows you to combined two arrays together nice and easily
 
