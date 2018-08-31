@@ -8,6 +8,7 @@ They are:
 - for in loops
 - for of loops <-- these are brand new and support for them is low
 - while loops
+- do while loops
 - functional iterators <-- I will create a different section for these to talk about them
 
 The most popular of that list is your common for loop. This is the loop I want everyone to focus on and master, then move onto the others.
@@ -28,7 +29,7 @@ for (var i = 0; i < 5; i++) {
 }
 
 // Or a little extra organization
-var i = 0;
+var i = 0
 
 for (i; i < 5; i++) {
   // Do a thing 5 times
@@ -53,7 +54,7 @@ for (iterator; condition; increment) {
 // The for loop first verifies our condition is still true
 for (var i = 0; i < 5; i++) {
   // if it is still true, execute the block of code
-  console.log('executed!');
+  console.log('executed!')
   // At the end of the loop we increase i by 1 and go back to the top stage to check the condition again
 }
 ```
@@ -62,5 +63,37 @@ This is essentially all there really is to a for loop.
 
 Still confused? Checkout MDN to get even more info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
 
+## While Loops
 
-**I want to wait before adding more loops because I want everyone to get the for loops down pat since it plays a vital role**
+The `while` loop is a powerful yet not as common loop. It's really good for large data sets, initially it is slower than a for loop. However the main difference here is that the longer a `for` loop runs the slower it will get. This is not true for a `while` loop as it will maintain performance no matter the data size.
+
+This is why it's a good use case for unknown data set sizes, or very large data sets.
+
+### Syntax
+
+```js
+var idx = 0
+var arr = [1, 2, 3]
+
+while (idx < arr.length) {
+  console.log(arr[idx])
+
+  idx++
+}
+```
+
+So let's break it down
+
+```js
+while (condition) {
+  // Do an Action
+  increment
+}
+```
+
+With while loops the `iterator` is going to be defined by an outside source usually a variable somewhere.
+
+- `condition` : So long as this condition remains true the loop will continue to iterate
+- `increment` : Notice we increment within the while loop. If you never make your condition falsey, well then you'll just loop forever!
+
+

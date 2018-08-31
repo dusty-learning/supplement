@@ -270,7 +270,7 @@ if ('test' < 1) {
 }
 ```
 
-#### Greater Than or Equal To (<=)
+#### Less Than or Equal To (<=)
 
 Returns true if the left side is less than or equal to the right side
 
