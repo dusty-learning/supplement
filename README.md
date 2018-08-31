@@ -5,4 +5,3 @@ A simple repo for supplemental content on certain topics!
 ## Topics
 
 - [JavaScript](https://github.com/dusty-learning/supplement/tree/master/JavaScript)
-- [Elm](https://github.com/dusty-learning/supplement/tree/master/Elm)
