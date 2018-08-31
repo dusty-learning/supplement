@@ -9,7 +9,7 @@ They are:
 - for of loops <-- these are brand new and support for them is low
 - while loops
 - do while loops
-- functional iterators <-- I will create a different section for these to talk about them
+- [functional iterators](https://github.com/dusty-learning/supplement/tree/master/JavaScript/Loops/functional-iterators)
 
 The most popular of that list is your common for loop. This is the loop I want everyone to focus on and master, then move onto the others.
 
